@@ -108,7 +108,7 @@ class App(tk.Tk):
         if not self._path:
             self.s_write("No path is selected!")
             return True
-            
+
         if not key:
             self.s_write("Your search key is empty!")
             return True
@@ -121,10 +121,3 @@ def main():
 
 if __name__=='__main__':
     main()
-
-
-#TODO
-#page num
-
-#TODO
-#Auto new line
