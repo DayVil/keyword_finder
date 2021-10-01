@@ -25,6 +25,7 @@ class App(tk.Tk):
 
         # canvas = tk.Canvas(self, width=750, height=300)
         # canvas.grid(columnspan=3, rowspan=5)
+        self.title("Pdf Word Finder")
         self.geometry("800x550")
 
         #loading image
