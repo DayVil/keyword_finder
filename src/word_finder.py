@@ -14,7 +14,7 @@ def _reset_log():
 
 def _find_word(path, pdf_name, lk_word):
     lis_page_num = []
-    with fitz.open(path+pdf_name) as pages:
+    with fitz.open(path + pdf_name) as pages:
         w = False
         for page in pages:
             lis_txt = page.getText().lower().strip().split()
@@ -28,15 +28,14 @@ def _find_word(path, pdf_name, lk_word):
 
                 lis_page_num.append(page.number)
                 _write_log(f"Word found at page: {page.number}\n")
-    
+
     return lis_page_num
-        
 
 
 def finder(path, lk_word):
     _reset_log()
     print("clicked!")
-    
+
     path += "/"
     lk_word = lk_word.lower()
     lis_dir = os.listdir(path=path)
@@ -49,11 +48,10 @@ def finder(path, lk_word):
                 ctx[file] = pag
 
     return ctx
-    
 
-        
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     PATH = "./res/samples/"
     looked_word = "This"
-    
+
     finder(PATH, looked_word)
